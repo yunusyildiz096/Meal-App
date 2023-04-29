@@ -17,8 +17,8 @@ interface MealService {
     ): MealResponse
 
     //www.themealdb.com/api/json/v1/1/lookup.php?i=52772
-    @GET("lookup.php")
-    suspend fun getMealDetail( @Query("i") id: String): MealDto
+    @GET("lookup.php?")
+    suspend fun getMealDetail( @Query("i") id: String): MealResponse
 
 
     @GET("filter.php?i=beef")

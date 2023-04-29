@@ -9,7 +9,7 @@ import com.example.mealapp.data.model.meal.MealResponse
 interface MealRepository {
 
     suspend fun searchMeal(queryValue: String): MealResponse
-    suspend fun getMealDetail(mealId: String): MealDto
+    suspend fun getMealDetail(mealId: String): MealResponse
     suspend fun getMeal(): MealResponse
     suspend fun getCategories(): MealCategoriesResponse
 

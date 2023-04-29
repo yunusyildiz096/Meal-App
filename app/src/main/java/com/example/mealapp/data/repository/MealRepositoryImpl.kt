@@ -16,7 +16,7 @@ class MealRepositoryImpl(private val api: MealService): MealRepository {
         return api.searchMeal(queryValue)
     }
 
-    override suspend fun getMealDetail(mealId: String): MealDto {
+    override suspend fun getMealDetail(mealId: String): MealResponse {
         return api.getMealDetail(mealId)
     }
 

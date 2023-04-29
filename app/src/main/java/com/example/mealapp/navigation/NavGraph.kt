@@ -1,6 +1,7 @@
 package com.example.mealapp.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -32,7 +33,7 @@ fun NavGraph(navController: NavHostController) {
         }
 
         composable(route = "${Screen.MealDetail.route}/{mealId}"){
-            MealDetailScreen()
+            MealDetailScreen(navController = navController)
         }
     }
 

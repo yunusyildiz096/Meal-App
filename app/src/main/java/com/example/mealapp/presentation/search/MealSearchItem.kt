@@ -74,7 +74,7 @@ fun MealSearchItem(meal:Meal) {
             Spacer(modifier = Modifier.width(5.dp))
 
             Text(
-                text = meal.strMeal,
+                text = meal.strMeal.orEmpty(),
                 color = MaterialTheme.colors.secondary,
                 fontWeight = FontWeight.Bold,
             )

@@ -17,9 +17,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.example.mealapp.domain.model.Meal
 
+@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun MealListItem(
     meal: Meal,
@@ -55,7 +57,7 @@ fun MealListItem(
             Spacer(modifier = Modifier.width(5.dp))
 
             Text(
-                text = meal.strMeal,
+                text = meal.strMeal.orEmpty(),
                 color = MaterialTheme.colors.secondary,
                 fontWeight = FontWeight.Bold,
             )
