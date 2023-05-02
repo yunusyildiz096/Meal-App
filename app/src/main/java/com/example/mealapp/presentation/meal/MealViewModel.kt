@@ -29,7 +29,7 @@ class MealViewModel @Inject constructor(
         getMealUseCase.invoke().onEach { result ->
             when(result){
                 is Resource.Success -> {
-                    _state.value = MealListState(categories = result.data ?: emptyList())
+                    _state.value = MealListState(meals = result.data ?: emptyList())
                 }
                 is Resource.Loading -> {
                     _state.value = MealListState(isLoading = true)

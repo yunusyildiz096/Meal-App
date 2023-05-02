@@ -31,36 +31,10 @@ fun MealScreen(
 
     Column(modifier = Modifier.fillMaxSize()){
 
-        Button(onClick = {
-                         navController.navigate("meal_search_screen")
-        }, colors = ButtonDefaults.buttonColors(backgroundColor = Color.White)
-            , modifier = Modifier
-                .padding(10.dp)
-                .background(Color.White, CircleShape)) {
-            Icon(
-                imageVector = Icons.Default.Search,
-                modifier = Modifier.size(24.dp),
-                contentDescription = "drawable icons",
-                tint = Color.Black
-            )
-            Text(
-                text = "Search",
-                color = Color.Black,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .weight(1f)
-                    .offset(x = 40.dp / 5)
-            )
-        }
-        Spacer(modifier = Modifier.height(5.dp))
-
-
-
-        
         Spacer(modifier = Modifier.height(5.dp))
         
         LazyColumn(contentPadding = PaddingValues(10.dp)){
-            items(state.categories){item ->
+            items(state.meals){item ->
                 MealListItem(meal = item,
                     onClickItem = {
                         navigateToMealDetail(it)
