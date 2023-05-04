@@ -40,6 +40,7 @@ fun MealListItem(
     ) {
 
 
+
         Row(modifier = Modifier.background(Color.White), verticalAlignment = Alignment.Bottom) {
 
             Image(

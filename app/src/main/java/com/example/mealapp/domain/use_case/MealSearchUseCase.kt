@@ -25,13 +25,4 @@ class MealSearchUseCase @Inject constructor(
         }
 
     }
-
-
-
-/*
-    operator fun invoke(queryValue: String): Flow<Resource<List<Meal>>> = flow {
-        mealRepository.searchMeal(queryValue)
-    }
-
- */
 }

@@ -19,7 +19,7 @@ fun NavGraph(navController: NavHostController) {
 
     NavHost(
         navController = navController,
-    startDestination = Screen.Meals.route){
+    startDestination = Screen.Search.route){
 
 
         composable(route = Screen.Meals.route){
@@ -29,7 +29,9 @@ fun NavGraph(navController: NavHostController) {
         }
 
         composable(route = Screen.Search.route){
-            MealSearchScreen()
+            MealSearchScreen(navigateToMealDetail = {
+                navController.navigate("${Screen.MealDetail.route}/$it")
+            }, navController = navController)
         }
 
         composable(route = "${Screen.MealDetail.route}/{mealId}"){
